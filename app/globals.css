@@ -156,6 +156,27 @@ button {
   border-radius: 46% 54% 42% 58% / 48% 42% 58% 52%;
 }
 
+@media (max-width: 1023px) {
+  .reveal {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .magnetic {
+    transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease, background-color 180ms ease;
+  }
+
+  .magnetic:hover {
+    transform: none;
+  }
+
+  .glass,
+  .glass-strong {
+    backdrop-filter: blur(18px);
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

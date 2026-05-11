@@ -31,7 +31,9 @@ export function ProjectsSection() {
                   src={project.image}
                   alt=""
                   fill
-                  sizes="(max-width: 1024px) 100vw, 33vw"
+                  loading="lazy"
+                  unoptimized
+                  sizes="(max-width: 640px) 92vw, (max-width: 1024px) 45vw, 33vw"
                   className="object-cover transition duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-forest-950/62 via-forest-950/8 to-transparent" />

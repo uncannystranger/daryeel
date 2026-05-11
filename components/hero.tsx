@@ -6,9 +6,9 @@ import { StatCard } from "./stat-card";
 
 export function Hero() {
   return (
-    <section id="home" className="eco-gradient relative min-h-screen overflow-hidden pt-32 md:pt-36">
+    <section id="home" className="eco-gradient relative overflow-hidden pt-28 md:pt-32 lg:min-h-screen lg:pt-36">
       <FloatingLeaves />
-      <div className="section-shell grid min-h-[calc(100vh-8rem)] items-center gap-12 pb-16 lg:grid-cols-[0.94fr_1.06fr] lg:gap-8">
+      <div className="section-shell grid gap-10 pb-14 lg:min-h-[calc(100vh-8rem)] lg:items-center lg:grid-cols-[0.94fr_1.06fr] lg:gap-8 lg:pb-16">
         <div className="relative z-10 max-w-3xl">
           <h1 className="text-balance text-[clamp(3rem,8vw,7.8rem)] font-black leading-[0.94] text-forest-950 dark:text-cream">
             A Greener Today, A Better <span className="text-forest-600 dark:text-forest-300">Tomorrow.</span>
@@ -44,21 +44,23 @@ export function Hero() {
           </div>
         </div>
 
-        <div className="relative min-h-[34rem] lg:min-h-[46rem]">
+        <div className="relative grid gap-4 lg:min-h-[46rem] lg:gap-0">
           <div className="absolute left-2 top-1/2 z-20 hidden h-[34rem] w-16 -translate-y-1/2 rounded-full border-l border-sunset/45 border-r border-forest-600/35 lg:block" />
-          <div className="organic-mask absolute inset-x-0 top-5 mx-auto h-[32rem] max-w-[42rem] overflow-hidden shadow-glass lg:right-0 lg:mx-0 lg:h-[43rem] lg:max-w-[52rem]">
+          <div data-hero-image className="organic-mask relative mx-auto aspect-[4/5] w-full max-w-[34rem] overflow-hidden shadow-glass lg:absolute lg:inset-x-0 lg:top-5 lg:right-0 lg:mx-0 lg:h-[43rem] lg:max-w-[52rem] lg:aspect-auto">
             <Image
-              src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1600&q=88"
+              src="/images/hero-seedling.webp"
               alt="Hands holding a young tree seedling in healthy soil"
               fill
               priority
-              sizes="(max-width: 1024px) 95vw, 52vw"
+              fetchPriority="high"
+              unoptimized
+              sizes="(max-width: 1024px) 92vw, 52vw"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-r from-cream/18 via-transparent to-forest-950/18 dark:from-forest-950/20" />
           </div>
 
-          <div className="glass absolute right-2 top-7 z-30 max-w-[18rem] rounded-[1.75rem] p-4 text-forest-950 dark:text-cream sm:right-12">
+          <div data-hero-pilot className="glass relative z-30 mx-auto -mt-14 max-w-[18rem] rounded-[1.75rem] p-4 text-forest-950 dark:text-cream sm:max-w-[20rem] lg:absolute lg:right-12 lg:top-7 lg:mx-0 lg:mt-0 lg:max-w-[18rem]">
             <div className="flex items-center gap-3">
               <span className="grid size-11 place-items-center rounded-full bg-sunset/18 text-sunset">
                 <ShieldCheck size={21} />
@@ -70,13 +72,13 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute bottom-12 left-0 right-0 z-30 mx-auto grid max-w-[46rem] grid-cols-1 gap-2.5 rounded-[1.6rem] border border-white/18 bg-forest-700/88 p-3 shadow-glass backdrop-blur-2xl sm:grid-cols-2 lg:right-4 lg:left-auto lg:mx-0 xl:grid-cols-4">
+          <div data-hero-stats className="relative z-30 mx-auto mt-2 grid w-full max-w-[34rem] grid-cols-1 gap-2.5 rounded-[1.6rem] border border-white/18 bg-forest-700/88 p-3 shadow-glass backdrop-blur-2xl sm:grid-cols-2 lg:absolute lg:bottom-12 lg:left-auto lg:right-4 lg:mx-0 lg:max-w-[46rem] xl:grid-cols-4">
             {heroMetrics.map((metric) => (
               <StatCard key={metric.label} metric={metric} />
             ))}
           </div>
 
-          <div className="absolute bottom-0 left-6 z-20 hidden items-center gap-3 rounded-full bg-white/70 px-4 py-3 text-sm font-bold text-forest-800 shadow-soft backdrop-blur dark:bg-white/10 dark:text-cream md:flex">
+          <div className="absolute bottom-0 left-6 z-20 hidden items-center gap-3 rounded-full bg-white/70 px-4 py-3 text-sm font-bold text-forest-800 shadow-soft backdrop-blur dark:bg-white/10 dark:text-cream lg:flex">
             <CheckCircle2 size={18} className="text-sunset" />
             SDG 13 + SDG 4 aligned
           </div>
@@ -95,7 +97,7 @@ export function Hero() {
 
 function FloatingLeaves() {
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+    <div className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden lg:block" aria-hidden="true">
       {Array.from({ length: 10 }).map((_, index) => (
         <span
           key={index}
