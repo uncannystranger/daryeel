@@ -1,5 +1,28 @@
 import type { Metadata, Viewport } from "next";
+import { Manrope } from "next/font/google";
 import "./globals.css";
+
+const manrope = Manrope({
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans"
+});
+
+const themeInitScript = `
+(() => {
+  try {
+    const storedTheme = window.localStorage.getItem("theme");
+    const hasManualTheme = storedTheme === "dark" || storedTheme === "light";
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const shouldDark = hasManualTheme ? storedTheme === "dark" : prefersDark;
+    const root = document.documentElement;
+    root.classList.toggle("dark", shouldDark);
+    root.dataset.theme = shouldDark ? "dark" : "light";
+    root.style.colorScheme = shouldDark ? "dark" : "light";
+  } catch {
+  }
+})();
+`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://daryeel-climate.org"),
@@ -38,7 +61,10 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body>{children}</body>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className={manrope.variable}>{children}</body>
     </html>
   );
 }

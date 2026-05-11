@@ -81,21 +81,21 @@ export const projects = [
     title: "Tree Survival Program",
     category: "SDG 13",
     description: "Students plant trees at home or safe locations, then monitor and care for them with accountability support.",
-    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1598335624134-5bceb5de202d?auto=format&fit=crop&w=1200&q=85",
     stat: "500 trees in 6 months"
   },
   {
     title: "Climate Education & Internships",
     category: "SDG 4",
     description: "Structured farm visits, practical training sessions, certificates, volunteer roles, and internships for active students.",
-    image: "https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1573577832472-107bd52e1cb1?auto=format&fit=crop&w=1200&q=85",
     stat: "20-30 interns trained"
   },
   {
     title: "Demonstration Farm",
     category: "Resilience",
     description: "A working farm that produces seedlings, teaches climate-smart agriculture, and creates income for program growth.",
-    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=85",
+    image: "https://images.unsplash.com/photo-1776151242370-5ae7d6d6c349?auto=format&fit=crop&w=1200&q=85",
     stat: "Nursery and food output"
   }
 ];

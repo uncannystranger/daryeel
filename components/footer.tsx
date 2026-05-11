@@ -27,7 +27,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-8 max-w-2xl text-pretty text-3xl font-black leading-tight md:text-5xl">
-              “Growing resilience. Empowering youth. Healing the land.”
+              “Youth-led climate action for a climate-resilient Somalia.”
             </p>
             <div className="mt-8 flex gap-3">
               {[Facebook, Instagram, Twitter, Linkedin].map((Icon, index) => (

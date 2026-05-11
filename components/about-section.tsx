@@ -4,7 +4,7 @@ import { SectionHeader } from "./section-header";
 
 export function AboutSection() {
   return (
-    <section id="about" className="relative overflow-hidden bg-[color:var(--background)] py-24 md:py-32">
+    <section id="about" className="section-wash relative overflow-hidden py-24 md:py-32">
       <div className="section-shell grid items-center gap-12 lg:grid-cols-[0.85fr_1.15fr]">
         <div className="reveal">
           <SectionHeader
@@ -27,9 +27,9 @@ export function AboutSection() {
             return (
               <article
                 key={card.title}
-                className="group rounded-[1.5rem] p-6 transition hover:bg-forest-700/6 dark:hover:bg-white/8 md:min-h-[18rem]"
+                className="group rounded-[1.5rem] border border-transparent p-6 transition hover:border-forest-700/10 hover:bg-white/45 dark:hover:border-white/10 dark:hover:bg-white/8 md:min-h-[18rem]"
               >
-                <div className="mb-8 grid size-16 place-items-center rounded-full bg-forest-500/12 text-forest-700 transition group-hover:scale-105 group-hover:bg-sunset/16 group-hover:text-sunset dark:bg-white/10 dark:text-forest-200">
+                <div className="mb-8 grid size-16 place-items-center rounded-full bg-forest-500/12 text-forest-700 transition group-hover:scale-105 group-hover:bg-[color:var(--accent)]/15 group-hover:text-[color:var(--accent)] dark:bg-white/10 dark:text-forest-200">
                   <Icon size={29} aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-black text-forest-950 dark:text-cream">{card.title}</h3>

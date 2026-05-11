@@ -6,7 +6,7 @@ export function ImpactSection() {
   return (
     <section
       id="impact"
-      className="relative overflow-hidden bg-forest-800 py-24 text-white md:py-32"
+      className="relative overflow-hidden bg-forest-800 py-24 text-white dark:bg-[#07150f] md:py-32"
       style={{ "--muted": "rgba(255, 255, 255, 0.76)" } as CSSProperties}
     >
       <div className="absolute inset-x-0 top-0 h-16 rounded-b-[50%] bg-[color:var(--background)]" aria-hidden="true" />
@@ -28,9 +28,9 @@ export function ImpactSection() {
             return (
               <article
                 key={item.title}
-                className="reveal group rounded-[2rem] border border-white/10 bg-white/[0.06] p-7 shadow-insetSoft backdrop-blur transition hover:-translate-y-2 hover:bg-white/[0.1]"
+                className="reveal group rounded-[2rem] border border-white/10 bg-white/[0.07] p-7 shadow-insetSoft backdrop-blur transition hover:-translate-y-2 hover:border-[color:var(--accent)]/45 hover:bg-white/[0.11]"
               >
-                <div className="mb-8 grid size-20 place-items-center rounded-full bg-cream text-forest-700 shadow-soft transition group-hover:bg-sunset group-hover:text-white">
+                <div className="mb-8 grid size-20 place-items-center rounded-full bg-white/12 text-[color:var(--accent)] shadow-soft backdrop-blur transition group-hover:bg-[color:var(--accent)] group-hover:text-[color:var(--accent-contrast)]">
                   <Icon size={32} aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-black">{item.title}</h3>
@@ -50,7 +50,7 @@ function LeafPattern() {
       {Array.from({ length: 8 }).map((_, index) => (
         <path
           key={index}
-          d={`M${20 + index * 24} 16C${60 + index * 12} ${46 + index * 9} ${69 + index * 8} ${84 + index * 9} ${88 + index * 18}`}
+          d={`M${20 + index * 24} 16 C ${58 + index * 14} ${38 + index * 8}, ${76 + index * 14} ${62 + index * 10}, ${96 + index * 12} ${88 + index * 12}`}
           stroke="currentColor"
           strokeWidth="8"
           strokeLinecap="round"

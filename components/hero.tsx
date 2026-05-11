@@ -1,5 +1,5 @@
 import { heroMetrics } from "@/data/site-content";
-import { ArrowDown, CheckCircle2, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowDown, CheckCircle2, ShieldCheck } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./button";
 import { StatCard } from "./stat-card";
@@ -10,10 +10,6 @@ export function Hero() {
       <FloatingLeaves />
       <div className="section-shell grid min-h-[calc(100vh-8rem)] items-center gap-12 pb-16 lg:grid-cols-[0.94fr_1.06fr] lg:gap-8">
         <div className="relative z-10 max-w-3xl">
-          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-forest-700/14 bg-white/45 px-4 py-2 text-xs font-bold uppercase tracking-[0.14em] text-forest-700 shadow-insetSoft backdrop-blur dark:border-white/12 dark:bg-white/8 dark:text-forest-200">
-            <Sparkles size={15} aria-hidden="true" />
-            Growing resilience. Empowering youth. Healing the land.
-          </div>
           <h1 className="text-balance text-[clamp(3rem,8vw,7.8rem)] font-black leading-[0.94] text-forest-950 dark:text-cream">
             A Greener Today, A Better <span className="text-forest-600 dark:text-forest-300">Tomorrow.</span>
           </h1>
@@ -74,7 +70,7 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="absolute bottom-12 left-0 right-0 z-30 mx-auto grid max-w-[44rem] grid-cols-1 gap-2 rounded-[1.6rem] border border-white/18 bg-forest-700/88 p-3 shadow-glass backdrop-blur-2xl sm:grid-cols-2 lg:right-4 lg:left-auto lg:mx-0 xl:grid-cols-4">
+          <div className="absolute bottom-12 left-0 right-0 z-30 mx-auto grid max-w-[46rem] grid-cols-1 gap-2.5 rounded-[1.6rem] border border-white/18 bg-forest-700/88 p-3 shadow-glass backdrop-blur-2xl sm:grid-cols-2 lg:right-4 lg:left-auto lg:mx-0 xl:grid-cols-4">
             {heroMetrics.map((metric) => (
               <StatCard key={metric.label} metric={metric} />
             ))}
