@@ -37,7 +37,7 @@ export function Navbar() {
           className="flex items-center gap-3 rounded-full outline-none focus-visible:ring-2 focus-visible:ring-sunset"
         >
           <Image
-            src="/images/daryeel-logo.png"
+            src="/images/daryeel-logo.webp"
             alt="Daryeel Climate Organization"
             width={64}
             height={64}

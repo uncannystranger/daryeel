@@ -20,7 +20,7 @@ export function Footer() {
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <div>
             <div className="flex items-center gap-4">
-              <Image src="/images/daryeel-logo.png" alt="Daryeel Climate Organization" width={84} height={84} className="size-20 rounded-full bg-white object-contain p-1" />
+              <Image src="/images/daryeel-logo.webp" alt="Daryeel Climate Organization" width={84} height={84} className="size-20 rounded-full bg-white object-contain p-1" />
               <div>
                 <h2 className="text-2xl font-black">Daryeel Climate Organization</h2>
                 <p className="text-sm font-semibold uppercase tracking-[0.16em] text-forest-200">A greener today, a better tomorrow</p>

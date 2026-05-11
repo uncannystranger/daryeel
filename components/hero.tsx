@@ -53,7 +53,6 @@ export function Hero() {
               fill
               priority
               fetchPriority="high"
-              unoptimized
               sizes="(max-width: 1024px) 92vw, 52vw"
               className="object-cover"
             />
@@ -97,15 +96,16 @@ export function Hero() {
 
 function FloatingLeaves() {
   return (
-    <div className="pointer-events-none absolute inset-0 z-0 hidden overflow-hidden lg:block" aria-hidden="true">
-      {Array.from({ length: 10 }).map((_, index) => (
+    <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden" aria-hidden="true">
+      {Array.from({ length: 14 }).map((_, index) => (
         <span
           key={index}
-          className="leaf-shape absolute size-4 animate-drift bg-gradient-to-br from-forest-500 to-olive opacity-50 blur-[0.2px]"
+          className="leaf-shape absolute size-3 animate-drift bg-gradient-to-br from-forest-500 to-olive opacity-45 blur-[0.2px] sm:size-4 lg:opacity-55"
           style={{
-            top: `${12 + ((index * 13) % 72)}%`,
-            animationDelay: `${index * -1.6}s`,
-            animationDuration: `${15 + (index % 5) * 3}s`
+            left: "-8vw",
+            top: `${8 + ((index * 11) % 78)}%`,
+            animationDelay: `${index * -1.25}s`,
+            animationDuration: `${12 + (index % 5) * 2.4}s`
           }}
         />
       ))}

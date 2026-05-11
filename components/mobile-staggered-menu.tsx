@@ -48,7 +48,7 @@ export function MobileStaggeredMenu({ activeSection, items, onClose, onNavigate,
         type="button"
         aria-label="Close menu"
         onClick={onClose}
-        className={`absolute inset-0 bg-forest-950/35 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`absolute inset-0 bg-forest-950/35 backdrop-blur-sm transition-opacity duration-200 ${
           open ? "opacity-100" : "opacity-0"
         }`}
       />
@@ -57,18 +57,18 @@ export function MobileStaggeredMenu({ activeSection, items, onClose, onNavigate,
         <span
           key={layer}
           aria-hidden="true"
-          className={`absolute inset-y-0 right-0 w-full transition-transform duration-500 ease-out ${
+          className={`absolute inset-y-0 right-0 w-full transition-transform duration-300 ease-out ${
             layer === 0 ? "bg-sunset" : "bg-forest-500"
           } ${open ? "translate-x-0" : "translate-x-full"} ${reducedMotion ? "!duration-0" : ""}`}
-          style={{ transitionDelay: open && !reducedMotion ? `${layer * 70}ms` : "0ms" }}
+          style={{ transitionDelay: open && !reducedMotion ? `${layer * 36}ms` : "0ms" }}
         />
       ))}
 
       <aside
-        className={`absolute inset-y-0 right-0 flex w-full flex-col overflow-y-auto bg-cream px-6 pb-8 pt-32 text-forest-950 shadow-glass transition-transform duration-500 ease-out dark:bg-forest-950 dark:text-cream sm:max-w-[28rem] ${
+        className={`absolute inset-y-0 right-0 flex w-full flex-col overflow-y-auto bg-cream px-6 pb-8 pt-32 text-forest-950 shadow-glass transition-transform duration-300 ease-out dark:bg-forest-950 dark:text-cream sm:max-w-[28rem] ${
           open ? "translate-x-0" : "translate-x-full"
         } ${open && !reducedMotion ? "will-change-transform" : ""} ${reducedMotion ? "!duration-0" : ""}`}
-        style={{ transitionDelay: open && !reducedMotion ? "140ms" : "0ms" }}
+        style={{ transitionDelay: open && !reducedMotion ? "72ms" : "0ms" }}
       >
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_16%_18%,rgba(232,137,34,0.18),transparent_15rem),radial-gradient(circle_at_82%_12%,rgba(123,148,65,0.18),transparent_18rem)]" />
         <div className="relative z-10 flex flex-1 flex-col">
@@ -85,10 +85,10 @@ export function MobileStaggeredMenu({ activeSection, items, onClose, onNavigate,
               return (
                 <li
                   key={item.href}
-                  className={`overflow-hidden transition duration-500 ease-out ${
+                  className={`overflow-hidden transition duration-300 ease-out ${
                     open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
                   } ${reducedMotion ? "!translate-y-0 !duration-0" : ""}`}
-                  style={{ transitionDelay: open && !reducedMotion ? `${180 + index * 42}ms` : "0ms" }}
+                  style={{ transitionDelay: open && !reducedMotion ? `${108 + index * 28}ms` : "0ms" }}
                 >
                   <a
                     href={item.href}
@@ -112,10 +112,10 @@ export function MobileStaggeredMenu({ activeSection, items, onClose, onNavigate,
           </ul>
 
           <div
-            className={`mt-auto pt-10 transition duration-500 ease-out ${
+            className={`mt-auto pt-10 transition duration-300 ease-out ${
               open ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             } ${reducedMotion ? "!translate-y-0 !duration-0" : ""}`}
-            style={{ transitionDelay: open && !reducedMotion ? "560ms" : "0ms" }}
+            style={{ transitionDelay: open && !reducedMotion ? "320ms" : "0ms" }}
           >
             <a
               href="#donate"

@@ -79,14 +79,14 @@ button {
   border: 1px solid var(--line);
   background: var(--panel);
   box-shadow: 0 24px 80px rgba(18, 61, 34, 0.11), inset 0 1px 0 rgba(255, 255, 255, 0.62);
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(16px);
 }
 
 .glass-strong {
   border: 1px solid var(--line);
   background: var(--panel-strong);
   box-shadow: 0 22px 70px rgba(25, 70, 39, 0.14), inset 0 1px 0 rgba(255, 255, 255, 0.58);
-  backdrop-filter: blur(28px);
+  backdrop-filter: blur(18px);
 }
 
 .dark .glass,
@@ -142,6 +142,7 @@ button {
 .leaf-shape {
   border-radius: 100% 0 100% 0;
   transform: rotate(45deg);
+  will-change: transform, opacity;
 }
 
 .magnetic {
@@ -173,7 +174,7 @@ button {
 
   .glass,
   .glass-strong {
-    backdrop-filter: blur(18px);
+    backdrop-filter: blur(12px);
   }
 }
 

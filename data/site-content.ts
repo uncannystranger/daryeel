@@ -95,7 +95,7 @@ export const projects = [
     title: "Demonstration Farm",
     category: "Resilience",
     description: "A working farm that produces seedlings, teaches climate-smart agriculture, and creates income for program growth.",
-    image: "https://images.unsplash.com/photo-1776151242370-5ae7d6d6c349?auto=format&fit=crop&w=1200&q=85",
+    image: "/images/demonstration-farm.webp",
     stat: "Nursery and food output"
   }
 ];
